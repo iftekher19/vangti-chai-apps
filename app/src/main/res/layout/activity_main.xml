@@ -3,36 +3,212 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium"
     tools:context=".MainActivity">
     <TextView
-        android:id="@+id/tvLabel"
+        android:id="@+id/txtTaka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/taka"
         android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
 
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
-        android:id="@+id/tvAmount"
+        android:id="@+id/txtAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         android:text="0"
+        android:gravity="end"
+        android:textStyle="bold"
         android:textSize="@dimen/text_large"
 
-        android:gravity="end"
+        app:layout_constraintTop_toTopOf="@id/txtTaka"
+        app:layout_constraintBottom_toBottomOf="@id/txtTaka"
+        app:layout_constraintStart_toEndOf="@id/txtTaka"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <LinearLayout
+        android:id="@+id/leftPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
 
+        app:layout_constraintTop_toBottomOf="@id/txtTaka"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rightPanel"
+
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/t500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="500      0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100      0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50        0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20        0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10        0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5          0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2          0"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1          0"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rightPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_medium"
 
-        app:layout_constraintStart_toEndOf="@id/tvLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvLabel"/>
+        app:layout_constraintTop_toBottomOf="@id/txtTaka"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="1"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="2"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="3"/>
+
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="4"/>
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="5"/>
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="6"/>
+
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="7"/>
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="8"/>
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="9"/>
+
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="C"/>
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
